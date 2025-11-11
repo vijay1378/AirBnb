@@ -44,4 +44,95 @@ public class Hotel {
 
     @OneToMany(mappedBy = "hotel", fetch = FetchType.LAZY)
     private List<Room> rooms;
+
+    @ManyToOne
+    private User owner;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String[] getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(String[] photos) {
+        this.photos = photos;
+    }
+
+    public String[] getAmenities() {
+        return amenities;
+    }
+
+    public void setAmenities(String[] amenities) {
+        this.amenities = amenities;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public HotelContactInfo getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(HotelContactInfo contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public List<Room> getRooms() {
+        return rooms;
+    }
+
+    public void setRooms(List<Room> rooms) {
+        this.rooms = rooms;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
 }
